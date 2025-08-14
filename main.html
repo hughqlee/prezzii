@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezzii Graphic Studio | 프렛찌 그래픽 스튜디오</title>
+    <meta name="description" content="프렛찌 그래픽 스튜디오 - 창의적이고 전문적인 그래픽 디자인 서비스를 제공합니다.">
+    <meta name="keywords" content="프렛찌, Prezzii, 그래픽 디자인, 브랜딩, 로고 디자인, 포스터 디자인, 채수경">
+    <meta name="author" content="채수경, Chae Sukyoung">
+    <meta property="og:title" content="Prezzii Graphic Studio - 프렛찌 그래픽 스튜디오">
+    <meta property="og:description" content="창의적이고 전문적인 그래픽 디자인 서비스를 제공하는 프렛찌 그래픽 스튜디오입니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prezzii.com">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://prezzii.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #84ff00 0%, #65d000 100%);
+            background-attachment: fixed;
+            font-family: 'Nanum Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .business-card-frame {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #84ff00 0%, #65d000 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 60px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-card-frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            pointer-events: none;
+        }
+
+        .brand-section {
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand-name {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            color: #1a1a1a;
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .brand-name .prezzii {
+            display: block;
+        }
+
+        .brand-name .studio {
+            font-weight: 600;
+            font-size: clamp(2.2rem, 6vw, 4.5rem);
+        }
+
+        .korean-name {
+            font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+            font-weight: 500;
+            color: #2d2d2d;
+            margin-top: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-section {
+            position: relative;
+            z-index: 2;
+            text-align: left;
+        }
+
+        .contact-info {
+            margin-bottom: 24px;
+        }
+
+        .contact-name {
+            font-size: clamp(1rem, 2.2vw, 1.4rem);
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .contact-item {
+            font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+            font-weight: 500;
+            color: #2d2d2d;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .contact-item:hover {
+            color: #1a1a1a;
+            transform: translateX(2px);
+        }
+
+        .footer-info {
+            font-size: clamp(0.8rem, 1.5vw, 1rem);
+            font-weight: 400;
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        .footer-info .company-name {
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-bottom: 4px;
+        }
+
+        .footer-info .ceo-name,
+        .footer-info .business-number {
+            margin-bottom: 2px;
+        }
+
+        .footer-info .copyright {
+            margin-top: 8px;
+            font-weight: 500;
+            color: #2d2d2d;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .business-card-frame {
+                padding: 40px 50px;
+            }
+
+            .contact-details {
+                gap: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .business-card-frame {
+                padding: 30px 40px;
+            }
+
+            .korean-name {
+                margin-top: 12px;
+            }
+
+            .contact-info {
+                margin-bottom: 20px;
+            }
+
+            .contact-details {
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .business-card-frame {
+                padding: 25px 30px;
+            }
+        }
+
+        /* 마우스 이동 시 미묘한 그라데이션 효과 */
+        .business-card-frame {
+            transition: background 0.3s ease;
+        }
+
+        /* 텍스트 선택 시 색상 */
+        ::selection {
+            background: rgba(26, 26, 26, 0.2);
+            color: #1a1a1a;
+        }
+
+        ::-moz-selection {
+            background: rgba(26, 26, 26, 0.2);
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+    <div class="business-card-frame">
+        <div class="brand-section">
+            <div class="brand-name">
+                <span class="prezzii">prezzii</span>
+                <span class="studio">graphic studio</span>
+            </div>
+            <div class="korean-name">프렛찌. 그래픽 스튜디오</div>
+        </div>
+
+        <div class="contact-section">
+            <div class="contact-info">
+                <div class="contact-name">채수경, CHAE Sukyoung</div>
+                <div class="contact-details">
+                    <a href="mailto:prezzii@naver.com" class="contact-item">prezzii@naver.com</a>
+                    <a href="https://instagram.com/prezzii.studio" target="_blank" class="contact-item">@prezzii.studio</a>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <div class="company-name">프렛찌</div>
+                <div class="ceo-name">대표 : 채수경</div>
+                <div class="business-number">사업자등록번호 : 530-32-01364</div>
+                <div class="copyright">©prezzii. All Rights Reserved.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 마우스 이동에 따른 미묘한 그라데이션 변화
+        document.addEventListener('mousemove', function(e) {
+            const frame = document.querySelector('.business-card-frame');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            const hue1 = Math.round(132 + x * 10); // 84ff00의 hue 값 기준
+            const hue2 = Math.round(101 + y * 10); // 65d000의 hue 값 기준
+            
+            frame.style.background = `linear-gradient(135deg, hsl(${hue1}, 100%, 50%) 0%, hsl(${hue2}, 100%, 41%) 100%)`;
+        });
+
+        // 페이지 로드 시 부드러운 페이드인 효과
+        document.addEventListener('DOMContentLoaded', function() {
+            const frame = document.querySelector('.business-card-frame');
+            frame.style.opacity = '0';
+            frame.style.transform = 'scale(0.98)';
+            frame.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            
+            setTimeout(() => {
+                frame.style.opacity = '1';
+                frame.style.transform = 'scale(1)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
